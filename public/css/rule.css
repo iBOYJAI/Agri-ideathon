@@ -1,0 +1,119 @@
+@import url(root.css);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+.rule_container {
+    position: relative;
+    margin: 4rem;
+    margin-top: 3rem;
+    backdrop-filter: blur(20px);
+    margin-right:auto;
+    border-radius:5px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    margin-left:auto;
+    width: 65%;
+    height: auto;
+    padding: 10px;
+    color: white;
+    box-shadow: 0 0 40px var(--primary-color);
+  }
+
+ .participant_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 3rem;
+ }
+
+ .participant_container .para { 
+  width: 50%;
+  justify-content: center;
+  text-align: center;
+ }
+
+ p {
+  color: black;
+   font-family: var(--primary-font);
+   margin: 0 0 13px 0;
+ }
+ 
+ .center { 
+  text-align: center;
+  padding: 25px; 
+  color: black;
+}
+ 
+ .container {
+   width: 95%;
+   max-width: 1220px;
+   margin: 0 auto;
+ }
+ 
+ .episode {
+   display: grid;
+   grid-template-columns: 1fr 3fr;
+   position: relative;
+ }
+ 
+ .episode__number {
+  color: black;
+   font-size: 4vw;
+   font-weight: 600;
+   padding: 10px 0;
+   position: sticky;
+   top: 0;
+   text-align: center;
+   height: calc(10vw + 20px);
+   transition: all 0.2s ease-in;
+ }
+ 
+ .episode__content {
+  color: black;
+   border-top: 2px solid #000000;
+   display: grid;
+   grid-template-columns: 1fr 4fr;
+   grid-gap: 10px;
+   padding: 15px 0;
+ }
+ 
+ .episode__content .title {
+   font-weight: 600
+ }
+ 
+ .episode__content .story {
+   line-height: 26px;
+ }
+ 
+ @media (max-width: 600px) {
+   .episode__content {
+     grid-template-columns: 1fr;
+   }
+ }
+ 
+ @media (max-width: 576px) {
+   .episode__content .story {
+     font-size: 15px;
+   }
+ }
+
+ @media screen and (max-width: 769px) {
+  .rule_container {
+    position: relative;
+    margin: 4rem;
+    margin-top: 3rem;
+    backdrop-filter: blur(20px);
+    margin-right:auto;
+    border-radius:20px;
+    background: var(--third-color);
+    margin-left:auto;
+    width: 80%;
+    height: auto;
+    padding: 10px;
+    border: 3px solid #2E2E2E;
+    color: white;
+ }
+ }

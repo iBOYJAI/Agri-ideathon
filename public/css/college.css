@@ -1,0 +1,73 @@
+
+.clg {
+    color: var(--primary-text);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.34);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+}
+
+.clg .clg_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clg .clg_logo img {
+    padding: 7px;
+    width: 80px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.clg .clg_name {
+    max-width: 500px;
+}
+
+.clg .clg_disc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clg .clg_disc i {
+    text-align: center;
+    font-size: 10px;
+}
+
+
+@media(max-width:900px) {
+    .clg {
+        width: 100%;
+        gap: .5rem;
+    }
+ }
+ 
+
+@media(max-width:768px) {
+    
+   .clg {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+   }
+
+   .clg .clg_logo img {
+    width: 40px;
+   }
+
+   .clg_name h1 {
+    font-size: 16px;
+   }
+    .clg .clg_disc i {
+        font-size: 5px;
+    } 
+}

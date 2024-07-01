@@ -1,0 +1,64 @@
+<style>
+   
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .scrollarrow {
+        cursor: pointer;
+        position: fixed;
+        bottom: 50px;
+        left: 95%;
+        width: 40px;
+        height: 40px;
+        background-size: 40px;
+        border-radius: 50%;
+        background: #1a1a1a url(/image/icon/arrow-min.png) no-repeat;
+        background-position: center;
+        z-index: 100000;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .scrollarrow.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* Responsive */
+   @media screen and (max-width: 500px){
+        .scrollarrow {
+            left: 85%;
+        }
+   }
+   @media screen and (min-width: 768px){
+        .scrollarrow {
+            left: 90%;
+        }
+   }
+
+ </style>
+ 
+ 
+ <div class="scrollarrow" onclick="scrollarrow();"></div>
+
+ <script> 
+
+     window.addEventListener('scroll' , function() {
+            var scroll = document.querySelector('.scrollarrow');
+            scroll.classList.toggle('active' , window.scrollY > 100)
+     })
+
+     function scrollarrow() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+     }
+     
+ </script>

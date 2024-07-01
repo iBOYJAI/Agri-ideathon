@@ -1,0 +1,220 @@
+@import url(root.css);
+
+form{
+    border: 1px solid black;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 30px;
+    box-shadow: 20px 20px 60px rgb(0, 0, 0);
+    background: rgba(255, 255, 255, 0.34);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    width: 80%;
+    padding: 30px;
+    padding-bottom: 50px;
+}
+
+form h1 {
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form .input-box {
+    padding: 10px;
+    width: 40%;
+    margin-left: 6%;
+    margin-top: 20px;
+}
+
+.input-box label {
+    color: var(--primary-tex);
+    font-weight: 600;
+}
+
+label span {
+    color: red;
+}
+
+.form :where(.input-box input, .select-box) {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: var(--third-color);
+    margin-top: 8px;
+    background: var(--fourth-color);
+    border: 1px solid #050505;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+.input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form .column {
+    display: flex;
+    column-gap: 15px;
+}
+
+.form .gender-box {
+    margin-top: 20px;
+}
+
+.gender-box h3 {
+    color: var(--primary-tex);
+    font-size: 1rem;
+    margin-left: 7%;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.form :where(.gender-option, .gender) {
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    margin-left: 4%;
+    margin-top: 10px;
+    column-gap: 10px;
+    flex-wrap: wrap;
+}
+
+.form .gender {
+    column-gap: 5px;
+}
+
+.gender input {
+    accent-color: rgb(0, 255, 55);
+}
+
+.form :where(.gender input, .gender label) {
+    cursor: pointer;
+}
+
+.gender label {
+    color: var(--primary-text);
+}
+
+.address :where(input, .select-box) {
+    margin-top: 15px;
+}
+
+
+.form .year-box {
+    width: 50%;
+    margin-top: 20px;
+}
+    
+.year-box h3 {
+    color: var(--primary-tex);
+    font-size: 1rem;
+    margin-left: 15%;
+    font-weight: 400;
+}
+    
+.form :where(.year-option, .year) {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: 10px;
+    column-gap: 10px;
+    flex-wrap: wrap;
+}
+    
+.form .year {
+    column-gap: 5px;
+}
+    
+.year input {
+    accent-color: rgb(0, 255, 55);
+}
+    
+.form :where(.year input, .year label) {
+    cursor: pointer;
+}
+    
+.year label {
+    color:var(--primary-text);
+}
+    
+.select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: var(--primary-text);
+    font-size: 1rem;
+}
+
+.form .button {
+    height: 55px;
+    width: 40%;
+    color: var(--secondary-text);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-left: 30%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgb(78, 45, 247);
+}
+
+.form .button:hover {
+    background: rgb(20, 3, 104);
+}
+
+.btn {
+    margin: 5px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: aqua;
+    width: 100px;
+    height: 40px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-right: 8px;
+}
+
+.btn:hover {
+    border: 1px solid black;
+    color: var(--secondary-text);
+    backdrop-filter: blur(10px);
+}
+
+.background{
+    opacity: 0.5;
+}
+
+::placeholder {
+    color: var(--primary-text);
+    font-size: small;
+    opacity: 30%;
+}
+
+/* responsive */
+@media screen and (max-width: 426px) {
+    .form .column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .form .input-box {
+        width: 95%;
+    } 
+
+    .form :where(.gender-option, .gender ) {
+        row-gap: 15px;
+    }   
+}

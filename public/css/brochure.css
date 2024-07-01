@@ -1,0 +1,37 @@
+.brochure_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+.brochure_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem;
+}
+
+.brochure_btn a button {
+  padding: 10px 20px;
+  border: none;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.brochure_btn a button:hover {
+  box-shadow: 0 0 20px green;
+}
+
+  @media (max-width: 769px){
+    .brochure_container {
+      flex-direction: column;
+    }
+    
+    .brochure_btn {
+      margin: 1rem;
+    }
+}

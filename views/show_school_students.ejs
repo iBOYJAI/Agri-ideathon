@@ -1,0 +1,130 @@
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/table.css">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<div class="title_container">
+    <div class="title">
+        School Students List - <%= no_total %>
+    </div>
+</div>
+
+<div class="table_container">
+    <div class="search_bar">
+        <input id="search" type="text" class="search"  placeholder="Search for name......">
+    </div>
+    <div class="table">
+        <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>School</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Standard</th>
+                <th>Phone 1</th>
+                <th>Phone 2</th>
+                <th>Email</th>
+                <th>Registered at</th>
+              </tr>
+            </thead>
+            <tbody id="table">
+              <% students.forEach(function(item, index) { %>
+                  <tr>
+                      <td><%= item.name %></td>
+                      <td><%= item.school %></td>
+                      <td><%= item.dob %></td>
+                      <td><%= item.gender %></td>
+                      <td><%= item.standard %></td>
+                      <td><%= item.phone1 %></td>
+                      <td><%= item.phone2 %></td>
+                      <td><%= item.email %></td>
+                      <td><%= item.registered_date.toLocaleDateString() %></td>
+                  </tr>
+              <% }); %>
+            </tbody>
+          </table>
+    </div>
+</div>
+
+<div style="display: flex; align-items: center; justify-content: center; gap: 6rem;">
+    <div>
+        <div class="title_container">
+            <div class="sub_title">
+                Gender Statistics
+            </div>
+        </div>
+        
+        <div class="table_container">
+            <div class="table">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Male</th>
+                        <th>Female</th>
+                        <th>Special</th>
+                      </tr>
+                    </thead>
+                    <tbody id="table">
+                        <tr>
+                            <td><%= no_male %></td>
+                            <td><%= no_female %></td>
+                            <td><%= no_special %></td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="title_container">
+            <div class="sub_title">
+                Standard Statistics
+            </div>
+        </div>
+        
+        <div class="table_container">
+            <div class="table">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>6th</th>
+                        <th>7th</th>
+                        <th>8th</th>
+                        <th>9th</th>
+                        <th>10th</th>
+                        <th>11th</th>
+                        <th>12th</th>
+                      </tr>
+                    </thead>
+                    <tbody id="table">
+                        <tr>
+                            <td><%= six %></td>
+                            <td><%= seven %></td>
+                            <td><%= eigth %></td>
+                            <td><%= nine %></td>
+                            <td><%= ten %></td>
+                            <td><%= eleven %></td>
+                            <td><%= twelve %></td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+    $("#search").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#table tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+    });
+</script>

@@ -1,0 +1,92 @@
+<link rel="stylesheet" href="/css/register.css">
+<link rel="stylesheet" href="/css/popup.css">
+<link rel="stylesheet" href="/css/particles.css">
+
+
+<style>
+    .particles {
+      height: 58rem;
+    }
+  
+    @media(max-width:768px) {
+      .particles {
+        height: 70rem;
+      }
+    }
+</style>
+
+<div id="particles-js" class="particles"></div>
+
+<div class="title_container">
+    <h1 class="title">Agricultural Activists  Registration</h1>
+</div>
+
+<form action="/public_register_submit" method="post" class="form">
+
+    <hr>
+    <div class="column">        
+        <div class="input-box">
+            <label>Name<span> *</span></label>
+            <input type="text" placeholder="Anbu A" name="name" required>
+        </div>
+        <div class="input-box">
+            <label for="gender" >Gender</label>
+              <select name="gender" id="gender" class="select-box" required>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Special">Special</option>
+              </select>
+        </div>
+    </div>
+          
+    <div class="column">
+        <div class="input-box">
+            <label>Phone Number 1<span> *</span></label>
+            <input type="number" placeholder="1234567890" required  name="phone1">
+        </div>
+        <div class="input-box">
+            <label>Phone Number 2</label>
+            <input type="number" placeholder="123456789" name="phone2">
+        </div>
+    </div>
+       
+    <div class="column">
+        <div class="input-box">
+            <label>Aadhar Number<span> *</span></label>
+            <input type="text" placeholder="12345678912" name="aadhar" id="aadhar">
+        </div>
+        <div class="input-box">
+            <label>Address<span> *</span></label>
+            <input type="text" placeholder="123/1, Abc Street, Xyz, 123456" name="address" id="address">
+        </div>
+    </div>
+                    
+    <input type="submit" class="button">
+</form>
+
+<% if(popup === 'display') { %>
+    <div class="popup_container">
+        <div class="popup">
+            <h2>Form Submitted Successfully</h2>
+            <a class="close" href="/public_register">&times;</a>
+            <div class="content">
+                Thank You for Your Registration!... We Meet You Soon!
+                <h5>Follow this link to join my WhatsApp group</h5>
+                <a href="https://chat.whatsapp.com/FD9J4h9Y47nIXV7A7zvPiC">https://chat.whatsapp.com/FD9J4h9Y47nIXV7A7zvPiC</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.body.style.overflow = 'hidden';
+    </script>
+<% } %>
+
+
+
+ <!-- scripts -->
+ <script src="/js/partical/particles.js"></script>
+ <script src="/js/partical/main.js"></script>
+ 
+ <!-- stats.js -->
+ <script src="/js/partical/lib/stats.js"></script>

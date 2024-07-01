@@ -1,0 +1,104 @@
+<link rel="stylesheet" href="/css/header.css" />
+<link rel="stylesheet" href="/css/college.css" />
+<link
+  href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+  rel="stylesheet"
+/>
+
+<header>
+  <div class="clg">
+    <div class="clg_logo">
+      <img src="/image/bg/gasc-min.png" />
+    </div>
+
+    <div class="clg_name">
+      <h1>GOBI ARTS & SCIENCE COLLEGE</h1>
+      <div class="clg_disc">
+        <i
+          >(Govt.Aided Autonomous Co-educational institution Affiliated to
+          Bharathiar University, Coimbatore.<br />
+          Accrediated with 'A' Grade by NAAC (4th cycle) & Recognised as STAR
+          College by DBT, Govt.of India.)
+        </i>
+      </div>
+    </div>
+  </div>
+  <nav>
+    <!-- side nav bar-->
+    <ul class="sidebar" id="mylist">
+      <div class="nav_links">
+        <li class="close">
+          <a onclick="jis()" style="cursor: pointer">
+            <i class="bx bxs-x-circle"></i>
+          </a>
+        </li>
+        <hr />
+        <li><a href="/">Home</a></li>
+        <hr />
+        <li><a href="/rule">Guidelines</a></li>
+        <hr />
+        <li><a href="/contact">Contact</a></li>
+        <hr />
+        <li><a href="/organizing">Committee</a></li>
+        <hr />
+        <li><a href="/gallery">Gallery</a></li>
+        <hr />
+        <li><a href="/brochure"> Brochure </a></li>
+        <hr />
+      </div>
+    </ul>
+
+    <!-- main nav bar -->
+    <ul>
+      <li class="menu"><a href="/"> Ideathon </a></li>
+      <li class="hideOn"><a href="/"> Home </a></li>
+      <li class="hideOn"><a href="/rule"> Guidelines </a></li>
+      <li class="hideOn"><a href="/organizing"> Committee </a></li>
+      <li class="hideOn"><a href="/contact"> Contact </a></li>
+      <li class="hideOn"><a href="/gallery"> Gallery </a></li>
+      <!-- <div class="dropdown">
+        <button class="dropbtn">Register</button>
+        <div class="dropdown-content">
+          <a href="/school_register">School</a>
+          <a href="/college_register">College</a>
+          <a href="/public_register">Agri Activists/Public</a>
+        </div>
+      </div> -->
+      <li class="hideOn"><a href="/brochure"> Brochure </a></li>
+      <li class="menu">
+        <a onclick="jis()" style="cursor: pointer">
+          <i class="bx bx-menu"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <script>
+    const togglebutton = document.getElementById("jai");
+    const mylists = document.getElementById("mylist");
+    const bodyElement = document.body;
+
+    togglebutton.addEventListener("click", function () {
+      if (mylists.style.display == "none" || mylists.style.display == "") {
+        mylists.style.display = "block";
+        bodyElement.style.overflow = "hidden";
+      } else {
+        mylists.style.display = "none";
+        bodyElement.style.overflow = "auto";
+      }
+    });
+
+    function jis() {
+      const togglebutton = document.getElementById("jai");
+      const mylists = document.getElementById("mylist");
+
+      if (mylists.style.display == "none" || mylists.style.display == "") {
+        mylists.style.display = "block";
+        bodyElement.style.overflow = "hidden";
+      } else {
+        mylists.style.display = "none";
+        bodyElement.style.overflow = "auto";
+      }
+    }
+  </script>
+</header>

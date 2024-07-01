@@ -1,0 +1,61 @@
+@import url(root.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+header {
+  background: url(../image/bg/clg-min.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  margin: 0;
+  height: 30vh;
+}
+
+main {
+  margin-top: 5%;
+  width: 100%;
+  min-height: 100vb;
+  padding-bottom: 3rem;
+}
+
+.title_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+  background-color: black;
+  padding: 20px;
+  color: white;
+}
+
+.title_container .title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.title_container .sub_title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 769px) {
+  .title_container {
+    padding: 10px;
+  }
+  .title_container .title {
+    font-size: 20px;
+  }
+}

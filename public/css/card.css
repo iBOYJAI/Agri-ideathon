@@ -1,0 +1,83 @@
+@import url(root.css);
+
+.topic_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem ;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.nft {
+  user-select: none;
+  max-width: 300px;
+  margin: 2rem auto;
+  border: 1px solid rgba(255, 255, 255, 0.1333333333);
+  background-color: #282c34;
+  background: linear-gradient(0deg, rgb(242, 234, 234) 0%, rgba(255, 255, 255, 0.747) 100%);
+  box-shadow: 0 0px 20px var(--primary-color);
+  border-radius: 0.7rem;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  overflow: hidden;
+  transition: 0.5s all;
+}
+
+.nft .main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+}
+
+.nft .main .tokenImage {
+  border-radius: 0.5rem;
+  max-width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.nft .main .description {
+  margin: 0.5rem 0;
+  color: #000;
+  font-size: 13px;
+  text-align: justify;
+}
+
+.nft ::before {
+  position: fixed;
+  content: "";
+  box-shadow: 0 0 100px 40px rgba(255, 255, 255, 0.031);
+  top: -10%;
+  left: -100%;
+  transform: rotate(-45deg);
+  height: 60rem;
+  transition: 0.7s all;
+}
+
+.nft:hover {
+  border: 1px solid rgba(255, 255, 255, 0.2666666667);
+  box-shadow: 0 7px 50px 10px rgba(0, 0, 0, 0.6666666667);
+  transform: scale(1.015);
+}
+
+.nft:hover ::before {
+  top: -100%;
+  left: 200%;
+}
+
+
+@media (max-width:1024px) {
+  .topic_container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width:768px) {
+  .topic_container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
