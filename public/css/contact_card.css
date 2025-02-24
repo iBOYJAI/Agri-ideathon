@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+}
+
 .contact_container {
   display: flex;
   align-items: center;
@@ -15,7 +22,7 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   flex-direction: column;
   margin-top: 40px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .contact_container .card:hover {
@@ -23,7 +30,7 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.contact_container .card-image img{
+.contact_container .card-image img {
   width: 100%;
   height: 160px;
   border-top-left-radius: 10px;
@@ -31,7 +38,7 @@
   object-fit: cover;
 }
 
-.contact_container .profile-image img{
+.contact_container .profile-image img {
   width: 120px;
   height: 120px;
   position: relative;
@@ -44,36 +51,41 @@
   transition-property: transform;
 }
 
-.contact_container .profile-image img:hover{
+.contact_container .profile-image img:hover {
   transform: scale(1.1);
 }
 
-.contact_container .card-content h3{
+.contact_container .card-content h3 {
   font-size: 25px;
   text-align: center;
   margin: 0;
 }
 
-.contact_container .card-content h4{
+.contact_container .card-content h4 {
   font-size: 15px;
+  font-weight: 200;
   text-align: center;
   margin: 0;
 }
 
-.contact_container .card-content p{
+.contact_container .card-content .role {
+  font-weight: 400;
+}
+
+.contact_container .card-content p {
   font-size: 16px;
   text-align: justify;
   padding: 0 20px 5px 20px;
 }
 
-.contact_container .icons{
+.contact_container .icons {
   text-align: center;
   padding-top: 5px;
   padding-bottom: 30px;
 }
 
-.contact_container .icons a{
-  font-weight: 700;
+.contact_container .icons a {
+  font-weight: 400;
   text-decoration: none;
   font-size: 15px;
   color: #000000;
@@ -82,12 +94,12 @@
   transition-property: transform;
 }
 
-.contact_container .icons a:hover{
+.contact_container .icons a:hover {
   color: #000;
   transform: scale(1.1);
 }
-    
-.contact_container .heading h2{
+
+.contact_container .heading h2 {
   display: inline;
   margin-left: 300px;
 }
@@ -143,17 +155,17 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     flex-direction: column;
     margin-top: 40px;
-    transition: .3s;
+    transition: 0.3s;
   }
-  .contact_container .card-content h3{
+  .contact_container .card-content h3 {
     font-size: 15px;
     text-align: center;
   }
-  .contact_container .card-content h4{
+  .contact_container .card-content h4 {
     font-size: 10px;
     text-align: center;
   }
-  .contact_container .card-content p{
+  .contact_container .card-content p {
     font-size: 11px;
     text-align: justify;
     padding: 0 20px 5px 20px;
@@ -165,7 +177,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 3rem;
-    gap: .7rem;
+    gap: 0.7rem;
   }
 
   .location_container {
@@ -189,5 +201,4 @@
     padding: 5px;
     font-size: 8px;
   }
-
 }
